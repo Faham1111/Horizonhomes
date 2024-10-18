@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Untree.co" />
+    <link rel="shortcut icon" href="favicon.png" />
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap5" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+
+    <link rel="stylesheet" href="css/tiny-slider.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Horizon Homes - Property Details</title>
+  </head>
+  <body>
+    <!-- Mobile Menu and Navbar -->
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close">
+          <span class="icofont-close js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <nav class="site-nav">
+      <div class="container">
+        <div class="menu-bg-wrap">
+          <div class="site-navigation">
+            <a href="index.html" class="logo m-0 float-start">Horizonhomes</a>
+            <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="properties.html">Properties</a></li>
+              <li><a href="evaluation.html">Evaluation</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about.html">About</a></li>
+              <li class="active"><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section with Dynamic Property Title -->
+    <div class="hero page-inner overlay" id="hero" style="background-image: url('images/hero_bg_3.jpg')">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-9 text-center mt-5">
+            <h1 class="heading" data-aos="fade-up" id="property-title">Property Title</h1>
+
+            <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
+              <ol class="breadcrumb text-center justify-content-center">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="properties.html">Properties</a></li>
+                <li class="breadcrumb-item active text-white-50" aria-current="page" id="breadcrumb-title">Property</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Property Details Section -->
+    <div class="section">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-7">
+            <div class="img-property-slide-wrap">
+              <div class="img-property-slide" id="property-images">
+                <!-- Images will be dynamically inserted here -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <h2 class="heading text-primary" id="property-price">Price</h2>
+            <h2 class="heading text-primary" id="property-name">Property Name</h2>
+            <p class="meta" id="property-location">Location</p>
+            <p class="text-black-50" id="property-description">Description</p>
+
+            <div class="d-block agent-box p-5">
+              <div class="img mb-4">
+                <img src="images/person_2-min.jpg" alt="Agent" class="img-fluid" />
+              </div>
+              <div class="text">
+                <h3 class="mb-0" id="agent-name">Agent Name</h3>
+                <div class="meta mb-3" id="agent-title">Agent Title</div>
+                <p id="agent-bio">Agent Bio</p>
+                <ul class="list-unstyled social dark-hover d-flex" id="agent-social">
+                  <li class="me-1"><a href="#"><span class="icon-instagram"></span></a></li>
+                  <li class="me-1"><a href="#"><span class="icon-twitter"></span></a></li>
+                  <li class="me-1"><a href="#"><span class="icon-facebook"></span></a></li>
+                  <li class="me-1"><a href="#"><span class="icon-linkedin"></span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="site-footer">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <p>&copy; 2024 Horizon Homes. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="property.js"></script>
+  </body>
+</html>

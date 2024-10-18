@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Untree.co" />
+    <link rel="shortcut icon" href="favicon.png" />
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap5" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/tiny-slider.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>
+      Horizonhomes
+    </title>
+    <style>
+        .drag-area {
+            padding: 20px;
+            border: 2px dashed #ccc;
+            text-align: center;
+            cursor: pointer;
+            margin-bottom: 15px;
+            transition: background-color 0.3s;
+            border-radius: 8px;
+        }
+        .drag-area.dragover {
+            background-color: #e0e0e0;
+        }
+        .notification {
+            display: none;
+        }
+        .success {
+            background-color: #28a745;
+            color: white;
+        }
+        .error {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close">
+          <span class="icofont-close js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <nav class="site-nav">
+      <div class="container">
+        <div class="menu-bg-wrap">
+          <div class="site-navigation">
+            <a href="index.html" class="logo m-0 float-start">Horizonhomes</a>
+
+            <ul
+              class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
+            >
+              <li><a href="index.html">Home</a></li>
+              <li class="has-children">
+                <a href="properties.html">Properties</a>
+                <ul class="dropdown">
+                  <li><a href="#">Buy Property</a></li>
+                  <li><a href="#">Sell Property</a></li>
+                  <li class="has-children">
+                    <a href="#">Dropdown</a>
+                    <ul class="dropdown">
+                      <li><a href="#">Sub Menu One</a></li>
+                      <li><a href="#">Sub Menu Two</a></li>
+                      <li><a href="#">Sub Menu Three</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="evaluation.html">Evaluation</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li class="active"><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+
+            <a
+              href="#"
+              class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
+              data-toggle="collapse"
+              data-target="#main-navbar"
+            >
+              <span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="hero page-inner overlay"
+      style="background-image: url('images/hero_bg_3.jpg')"
+    >
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-9 text-center mt-5">
+            <h1 class="heading" data-aos="fade-up">Apply</h1>
+
+            <nav
+              aria-label="breadcrumb"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <ol class="breadcrumb text-center justify-content-center">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li
+                  class="breadcrumb-item active text-white-50"
+                  aria-current="page"
+                >
+                  Apply
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 class="text-center mb-4">Apply for Real Estate Agent Job</h2>
+                <form id="applyForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Your full name" required>
+                    </div>
+    
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Your email address" required>
+                    </div>
+    
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your phone number" required>
+                    </div>
+    
+                    <div class="mb-3">
+                        <label for="experience" class="form-label">Experience (in years)</label>
+                        <input type="number" class="form-control" id="experience" name="experience" placeholder="Years of experience" required>
+                    </div>
+    
+                    <div class="mb-3">
+                        <label for="location" class="form-label">Preferred Location</label>
+                        <input type="text" class="form-control" id="location" name="location" placeholder="Preferred working location" required>
+                    </div>
+    
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Why do you want to join Horizon Homes?</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+                    </div>
+    
+                    <!-- Updated drag-and-drop area -->
+                    <div class="drag-area" id="dragArea">
+                        Drag & Drop your CV here or <strong>click</strong> to upload
+                        <br><small class="text-muted">Accepted formats: .pdf, .doc, .docx</small>
+                    </div>
+                    <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" class="d-none" required>
+    
+                    <button type="submit" class="btn btn-primary w-100" style="margin-bottom: 20px;">Submit Application</button>
+    
+                    <div class="notification success mt-3 p-3 text-center" id="successMessage">Registration successful! We will contact you soon.</div>
+                    <div class="notification error mt-3 p-3 text-center" id="errorMessage">Registration failed. Please try again.</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="widget">
+              <h3>Contact</h3>
+              <address>43 Raymouth Rd. Baltemoer, London 3910</address>
+              <ul class="list-unstyled links">
+                <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
+                <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
+                <li>
+                  <a href="mailto:info@mydomain.com">info@mydomain.com</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <div class="widget">
+              <h3>Sources</h3>
+              <ul class="list-unstyled float-start links">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Vision</a></li>
+                <li><a href="#">Mission</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+              </ul>
+              <ul class="list-unstyled float-start links">
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Creative</a></li>
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <div class="widget">
+              <h3>Links</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Our Vision</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+              </ul>
+
+              <ul class="list-unstyled social">
+                <li>
+                  <a href="#"><span class="icon-instagram"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-twitter"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-facebook"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-linkedin"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-pinterest"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon-dribbble"></span></a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /.col-lg-4 -->
+        </div>
+        <!-- /.row -->
+
+        <div class="row mt-5">
+          <div class="col-12 text-center"></div>
+            <p>
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              . All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.site-footer -->
+
+    <!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        const form = document.getElementById('applyForm');
+const dragArea = document.getElementById('dragArea');
+const cvInput = document.getElementById('cv');
+const successMessage = document.getElementById('successMessage');
+const errorMessage = document.getElementById('errorMessage');
+
+// Drag and drop functionality
+dragArea.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    dragArea.classList.add('dragover');
+});
+
+dragArea.addEventListener('dragleave', () => {
+    dragArea.classList.remove('dragover');
+});
+
+dragArea.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dragArea.classList.remove('dragover');
+    const files = e.dataTransfer.files;
+    if (files.length) {
+        cvInput.files = files;
+        dragArea.textContent = files[0].name + " uploaded successfully!";
+    }
+});
+
+dragArea.addEventListener('click', () => {
+    cvInput.click();
+});
+
+cvInput.addEventListener('change', () => {
+    if (cvInput.files.length) {
+        dragArea.textContent = cvInput.files[0].name + " uploaded successfully!";
+    }
+});
+
+// Form submission with validation
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let errorMessages = [];
+    const formData = new FormData(form);
+
+    // Validate all fields
+    if (!formData.get('name')) {
+        errorMessages.push("Full name is required.");
+    }
+
+    if (!formData.get('email')) {
+        errorMessages.push("Email is required.");
+    } else if (!validateEmail(formData.get('email'))) {
+        errorMessages.push("Invalid email format.");
+    }
+
+    if (!formData.get('phone')) {
+        errorMessages.push("Phone number is required.");
+    } else if (!validatePhone(formData.get('phone'))) {
+        errorMessages.push("Invalid phone number format.");
+    }
+
+    if (!formData.get('experience')) {
+        errorMessages.push("Experience is required.");
+    }
+
+    if (!formData.get('location')) {
+        errorMessages.push("Preferred location is required.");
+    }
+
+    if (!formData.get('message')) {
+        errorMessages.push("Message is required.");
+    }
+
+    if (!cvInput.files.length) {
+        errorMessages.push("CV is required.");
+    }
+
+    // Show error messages if any, otherwise success message
+    if (errorMessages.length > 0) {
+        errorMessage.innerHTML = errorMessages.join('<br>');
+        errorMessage.style.display = 'block';
+        successMessage.style.display = 'none';
+    } else {
+        successMessage.style.display = 'block';
+        errorMessage.style.display = 'none';
+        form.reset();
+        dragArea.textContent = 'Drag & Drop your CV here or click to upload'; // Reset drag area text
+    }
+});
+
+// Simple email validation function
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+}
+
+// Simple phone number validation function (allows 10-digit numbers)
+function validatePhone(phone) {
+    const re = /^\d{10}$/;
+    return re.test(String(phone));
+}
+
+    </script>
+  </body>
+</html>
